@@ -102,6 +102,14 @@ class SortingRobot:
         while self.light_is_on():
             self.set_light_off()
 
+            # This while loop's main purpose is to have the robot grab one item at a time
+            # compare it to the next one in line, swap if it finds an item less than what it
+            # holds then move back left and drops the item in the empty space. Then moves right
+            # once and repeats this process until it hits the end of the line.
+            # Then it moves all the way back to the start of the list then this while loop repeats
+            # Robot's light is turned on if it swapped item positions anytime through it's run of the list.
+            # The above loop only runs if the light was turned on in here otherwise as seen it turns the
+            # light off at each entry into the loop.
             while True:
                 if self.can_move_right():
                     self.swap_item()
