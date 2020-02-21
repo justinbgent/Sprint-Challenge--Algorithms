@@ -41,6 +41,8 @@ c)  def bunnyEars(bunnies):
       return 2 + bunnyEars(bunnies-1)
 ```
 
+This looks like O(1) it gets no more complicated for each number input. No extra work is done for it I put 10 vs 10,000
+
 ## Exercise II
 
 
