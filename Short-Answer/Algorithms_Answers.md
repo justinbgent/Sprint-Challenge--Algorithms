@@ -45,4 +45,18 @@ This looks like O(1) it gets no more complicated for each number input. No extra
 
 ## Exercise II
 
+My better version of the instructions:
+If floor is equal to or above f, eggs are broken upon throw.
+If floor is less than f, eggs are not broken upon drop.
+Find a way make eggs broken minimized by solving for f.
+Let n represent all the amount floors of the building.
 
+A binary search needs to be done so we minimize the amount of needed testing and breaking of eggs. Solution in words:
+
+Take n and divide it in half. Drop an egg at that number. 
+
+If egg breaks we are above f and we can know all floors at and above our value will also surely break our egg and can eliminate these floors from being our f value.
+
+Else egg doesn't break we can assume all floors below our value are safe and we've either found f or some floor below it. Eliminate all floors below this value from being f. We must continue our research for now just to be sure.
+
+Next we take our values that aren't eliminated from being f and half them then drop an egg at that value. Repeat the if and else above. And keep repeating this process until we have only one value left which we can be sure then is f.
